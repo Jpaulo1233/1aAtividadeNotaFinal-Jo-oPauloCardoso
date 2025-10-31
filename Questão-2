@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Calculadora</title>
+    <style>
+        .fundo{
+       background-color: #fff;
+       padding: 20px;
+       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+       text-align: center;
+       width: 330px;
+       border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="fundo">
+    <h1>Minha Calculadora</h1><br/>
+
+    Primeiro Numero<br/>
+    <input id="n1" type="number"/><br/><br/>
+
+    Segundo Numero<br/>
+    <input id="n2" type="number"/><br/><br/>
+
+    <button onclick="somar()">Somar</button>
+    <br/><br/>
+
+    O Resultado é <span></span>
+    </div>
+
+    <script>
+      var n1 = document.querySelector('#n1')
+      var n2 = document.querySelector('#n2')
+      var resultado = document.querySelector('span')
+
+      function somar() {
+        resultado.innerHTML = parseInt(n1.value) + parseInt(n2.value)
+      }
+    </script>
+</body>
+</html>
