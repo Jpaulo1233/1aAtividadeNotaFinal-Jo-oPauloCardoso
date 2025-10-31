@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cor de Fundo</title>
+    <style>        
+body{
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 50px;
+}
+button{
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+    </style>
+</head>
+<body>
+    <h1>Mude a cor do fundo da página</h1>
+    <button onclick="mudarcor()">Mudar Cor de Fundo</button>
+
+    <script>
+        function mudarcor(){
+        const red=Math.floor(Math.random()* 255)
+        const green=Math.floor(Math.random()* 255)
+        const blue=Math.floor(Math.random()* 255)
+        document.body.style.backgroundColor= `rgb(${red},${green},${blue}`
+}
+    </script>
+</body>
+</html>
