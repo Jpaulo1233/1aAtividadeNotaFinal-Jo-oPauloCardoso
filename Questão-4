@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+     <style>
+        .fundo{
+       background-color: #fff;
+       padding: 20px;
+       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+       text-align: center;
+       width: 330px;
+       border-radius: 8px;
+        }
+        label {
+            font-size: 14px;
+            color: #555;
+        }
+        button{
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+input{
+      
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+
+}
+h1{
+  color: #007BFF;;
+}
+        
+    </style>
+</head>
+<body>
+  <div class="fundo">
+    <h1>Calculadora de IMC</h1>
+    <div class="">
+    Peso (kg):<br/>
+    <input type="number" id="weight"><br/><br/>
+    </div>
+
+    Altura (Cm):<br/>
+    <input type="number" id="height"><br/><br/>
+
+    <button onclick="calcularIMC()">Calcular IMC </button>
+    <br/><br/>
+    O Resultado é: <span></span>
+    
+    <script>
+      function calcularIMC() {
+        const peso = parseFloat(document.getElementById('weight').value);
+        const altura = parseFloat(document.getElementById('height').value);
+        const imc = peso / (altura * altura);
+        
+        var resultado = document.querySelector('span')
+        
+        resultado.innerHTML = peso / (altura * altura);
+      }
+    </script>
+
+</body>
+</html>
